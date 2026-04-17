@@ -593,12 +593,6 @@
         .read-more:hover {
             color: #6a9c92;
         }
-        
-        /* 更多文章按钮样式 */
-        .more-articles-btn-container {
-            text-align: center;
-            margin-top: 50px;
-        }
 
         .more-articles-btn {
             display: inline-block;
@@ -615,7 +609,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .more-articles-btn:hover {
             background-color: #6a9c92;
             transform: translateY(-3px);
@@ -971,6 +965,12 @@
             color: #888888;
         }
         
+        /* 更多文章按鈕 - 現已改為外部連結 */
+        .more-articles-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
         /* 響應式設計 */
         @media (max-width: 768px) {
             .header-container {
@@ -1140,7 +1140,7 @@
     </div>
     
     <!-- 網站頭部 - 包含品牌標識和主導航 -->
-     <header>
+    <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="https://static.wixstatic.com/media/1d8add_500e1c6aa1d34b55a4477644a5471d94~mv2.jpg" alt="365開鎖公司標誌" style="height:70px; width:auto; border-radius:5px; border:2px solid #82b8ac; margin-right:10px;">
@@ -1182,31 +1182,26 @@
             <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="cta-button whatsapp">💬 WhatsApp即時聯絡</a>
         </div>
     </section>
-       
+
     <!-- 優勢部分 - 包含Google Maps真實好評 -->
     <section class="advantages" id="advantages">
         <div class="container">
             <h2 class="section-title">為什麼選擇365開鎖？</h2>
-
-        
-            
             <div class="knowledge-full-article">
                 <div class="knowledge-card">
             <!-- Google Maps 好評展示 (加入真實好評與連結，並在徽章上方加入圖片位置) -->
-             <br>
-             
-             <!-- 以下文字已置中，並移除了 &nbsp; 和開頭空白 -->
-             <h3 style="text-align: center; margin: 0 auto; width: 100%;">365開鎖服務多年，態度專業，誠實可靠，價錢合理，每日為超過20位客人處理大大小鎖類問題，大量真實用家好評支持作參考絕對是您首選的鎖類工程公司。</h3>
-
-
+            <br>
+            
+            <!-- 以下文字已置中 -->
+            <h3 style="text-align: center; margin: 0 auto; width: 100%;">365開鎖服務多年，態度專業，誠實可靠，價錢合理，每日為超過20位客人處理大大小鎖類問題，大量真實用家好評支持作參考絕對是您首選的鎖類工程公司。</h3>
             <div style="margin-top: 60px;">
                 <h3 style="text-align: center; font-size: 28px; color: #333; margin-bottom: 20px;">⭐ Google Maps 客戶真實好評</h3>
                 
                 <!-- 新插入的圖片：在標題下方加入 -->
                 <div style="text-align: center; margin-bottom: 25px;">
                     <img src="../images/article/article-01/wallpaper.jpeg" 
-                         alt="Google Maps 客戶好評圖片" 
-                         style="max-width: 65%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                        alt="Google Maps 客戶好評圖片" 
+                        style="max-width: 65%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                 </div>
                 
                 <div class="reviews-grid">
@@ -1295,7 +1290,6 @@
                             <a href="https://maps.app.goo.gl/KyU2fW35EEEnUHz1A" target="_blank" rel="noopener" class="review-link">查看 Google 評論</a>
                         </div>
                     </div>  
-
                         <!-- 真實好評 6 (對應連結6) -->
                     <div class="review-card">
                         <div class="review-header">
@@ -1315,26 +1309,19 @@
                     </div>
                 </div>
                 
-
                                 <div class="view-all-reviews">
                     <!-- 使用第一個連結作為查看全部評論的連結 (假設為總評頁面) -->
                     <a href="https://maps.app.goo.gl/WjYNzw233csHPhFA6" target="_blank" rel="noopener">查看全部Google Maps評價</a>
                 </div>
-
                 
                 <div style="margin-top: 60px;">
                 <h3 style="text-align: center; font-size: 28px; color: #333; margin-bottom: 20px;"> FACEBOOK客戶真實好評</h3>
-
-
                 <!-- 新插入的圖片：在標題下方加入 -->
                 <div style="text-align: center; margin-bottom: 25px;">
-                    <img src="/images/article/article-01/facebook-5-star-review.jpeg" 
-                         alt="Google Maps 客戶好評圖片" 
-                         style="max-width: 65%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    <img src="../images/article/article-01/facebook-5-star-review.jpeg" 
+                        alt="Google Maps 客戶好評圖片" 
+                        style="max-width: 65%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                 </div>
-
-
-                                
                 <!-- 新增：Facebook評價連結，置於Google Maps評價下方，保持相同風格 -->
                         <div class="view-all-reviews" style="margin-top: 10px;">
                         <a href="https://www.facebook.com/share/17T6zh11LH" target="_blank" rel="noopener">查看Facebook評價</a>
@@ -1345,21 +1332,19 @@
                         <div class="contact-buttons">
                             <a href="tel:+852-56300365" class="btn" style="font-size: 16px; background-color: #82b8ac; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">📞 緊急即撥 5630 0365</a>
                             <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="btn" style="font-size: 16px; background: #25D366; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">💬 WhatsApp 查詢</a>
-                             <BR>
                             <BR>
+                            <BR>
+                                
                         </div>
-
                         </div>
                     </div>
                 </div>
-             </div>
-        </div>
-
+            </div>
+        </div>  
         <!-- 瀏覽更多開鎖防知識按鈕 -->
             <div class="more-articles-btn-container">
-                <a href="/knowledge.html" class="more-articles-btn" target="_blank" rel="noopener noreferrer">📚 瀏覽更多開鎖防盜知識</a>
+                <a href="../knowledge.html" class="more-articles-btn" target="_blank" rel="noopener noreferrer">📚 瀏覽更多開鎖防盜知識</a>
             </div>
-
     </section>
     
     <!-- 聯繫信息部分 - 包含詳細聯繫方式 -->
@@ -1393,7 +1378,7 @@
                         <li><a href="https://maps.app.goo.gl/mW4TzPdYgh18P7Ty9" target="_blank" class="contact-link email">
                                 地址: 土瓜灣旭日街19號雅高工業大廈1212室
                             </a></li>
-                         <li><a href="https://maps.app.goo.gl/mW4TzPdYgh18P7Ty9" target="_blank" class="contact-link email">
+                        <li><a href="https://maps.app.goo.gl/mW4TzPdYgh18P7Ty9" target="_blank" class="contact-link email">
                             服務時間: 24小時，全年無休</a></li>
                     </ul>
                 </div>
@@ -1447,11 +1432,10 @@
                 <div class="footer-column">
                     <h4>關注我們</h4>
                     <ul>
-                        <li><a href="https://www.facebook.com/share/17T6zh11LH"><img src="/images/logo/fb-logo.jpg" alt="Facebook" width="23" height="23">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/365_locksmith_hk"><img src="/images/logo/ig-logo.jpg" alt="Instagram" width="20" height="20">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@365locksmithhk"><img src="/images/logo/yt-logo.jpg" alt="YouTube" width="20" height="20">YouTube</a></li>
-
-                        <li><a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank"><img src="/images/logo/wa-logo.jpg" alt="WhatsApp" width="25" height="25">WhatsApp聯絡</a></li>
+                        <li><a href="https://www.facebook.com/share/17T6zh11LH"><img src="../images/logo/fb-logo.jpg" alt="Facebook" width="23" height="23">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/365_locksmith_hk"><img src="../images/logo/ig-logo.jpg" alt="Instagram" width="20" height="20">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@365locksmithhk"><img src="../images/logo/yt-logo.jpg" alt="YouTube" width="20" height="20">YouTube</a></li>
+                        <li><a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank"><img src="../images/logo/wa-logo.jpg" alt="WhatsApp" width="25" height="25">WhatsApp聯絡</a></li>
                     </ul>
                 </div>
             </div>
