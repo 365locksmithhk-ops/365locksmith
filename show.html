@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="365開鎖| 24小時開鎖 香港24小時專業開鎖換鎖服務，快速可靠，專業鎖匠，15分鐘極速上門，開鎖、換鎖、電子鎖安裝維修一站式服務。">
+    <meta name="keywords" content="開鎖, 三星電子鎖,365開鎖, 24小時開鎖, 56300365">
+    <meta name="author" content="365開鎖公司">
+    <title>365開鎖 - 24小時專業開鎖換鎖服務</title>
+    <link rel="shortcut icon" href="images/LOGO/365-LOGO.jpg" type="image/x-icon">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif; }
+        body { line-height: 1.6; color: #333; background-color: #f5f5f5; background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        header { background: linear-gradient(135deg, #3a3a3a 0%, #2c2c2c 100%); color: #f5f5f5; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-bottom: 2px solid #82b8ac; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { display: flex; align-items: center; flex-wrap: wrap; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo h1 { font-size: 28px; color: #f5f5f5; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .logo p { font-size: 14px; color: #82b8ac; margin-top: 2px; }
+        nav ul { display: flex; list-style: none; flex-wrap: wrap; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: #f5f5f5; text-decoration: none; font-weight: 500; font-size: 16px; padding: 8px 15px; border-radius: 4px; transition: all 0.3s; border: 1px solid transparent; }
+        nav ul li a:hover { background-color: rgba(130, 184, 172, 0.2); border: 1px solid #82b8ac; }
+        .emergency-bar { background: linear-gradient(to right, #82b8ac, #6a9c92); color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 18px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; box-shadow: 0 3px 10px rgba(0,0,0,0.2); border-bottom: 2px solid #558a7e; }
+        .emergency-bar span { margin-right: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+        .emergency-bar a { color: white; text-decoration: none; padding: 10px 22px; border-radius: 30px; margin: 5px; display: inline-block; transition: transform 0.3s, box-shadow 0.3s; font-weight: 600; }
+        .emergency-bar a.phone { background: linear-gradient(to right, #ff9800, #f57c00); box-shadow: 0 3px 8px rgba(245, 124, 0, 0.4); }
+        .emergency-bar a.whatsapp { background: linear-gradient(to right, #25D366, #1da851); box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4); }
+        .emergency-bar a:hover { transform: scale(1.05); box-shadow: 0 5px 12px rgba(0,0,0,0.3); }
+        .float-buttons { position: fixed; bottom: 30px; right: 30px; z-index: 1000; display: flex; flex-direction: column; gap: 15px; }
+        .float-button { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s; color: white; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); }
+        .float-button.whatsapp { background: linear-gradient(135deg, #25D366, #1da851); }
+        .float-button.phone { background: linear-gradient(135deg, #ff9800, #f57c00); }
+        .float-button:hover { transform: scale(1.1); box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .hero { background: linear-gradient(rgba(58, 58, 58, 0.8), rgba(44, 44, 44, 0.8)), url('https://images.unsplash.com/photo-1585773690161-4d5f4b8c6e71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center; background-size: cover; color: #f5f5f5; padding: 100px 0; text-align: center; border-bottom: 3px solid #82b8ac; }
+        .hero h2 { font-size: 36px; margin-bottom: 20px; color: #f5f5f5; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; color: #e0e0e0; line-height: 1.7; }
+        .cta-button { display: inline-block; color: white; padding: 16px 38px; font-size: 20px; font-weight: bold; text-decoration: none; border-radius: 5px; transition: all 0.3s; margin: 5px; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .cta-button.phone { background: linear-gradient(to right, #ff9800, #f57c00); }
+        .cta-button.whatsapp { background: linear-gradient(to right, #25D366, #1da851); }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
+        .section-title { text-align: center; margin-bottom: 50px; color: #333; font-size: 32px; position: relative; font-weight: 700; }
+        .section-title:after { content: ''; display: block; width: 80px; height: 4px; background: linear-gradient(to right, #82b8ac, #6a9c92); margin: 10px auto; border-radius: 2px; }
+        .service-district { padding: 70px 0; background: #ffffff; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+        .district-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 22px; margin-top: 30px; }
+        .district-item { background: linear-gradient(145deg, #fafbfc, #f0f2f5); border-radius: 16px; text-align: center; transition: all 0.25s ease; border: 1px solid #d4dadf; list-style: none; }
+        .district-item:hover { transform: translateY(-6px); box-shadow: 0 14px 22px rgba(130, 184, 172, 0.2); border-color: #82b8ac; background: white; }
+        .district-item a { display: block; padding: 16px 8px; text-decoration: none; color: #1e3a3a; font-weight: 600; font-size: 16px; border-radius: 16px; cursor: pointer; }
+        .district-item a:hover { color: #6a9c92; text-decoration: underline; }
+        .district-detail { display: none; margin-top: 20px; }
+        .district-detail.active { display: block; }
+        /* 統一返回按鈕樣式，香港島、九龍、新界完全一致 */
+        .back-to-list, .back-to-list-hki, .back-to-list-nt, .back-to-main {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background-color: #82b8ac;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .back-to-list:hover, .back-to-list-hki:hover, .back-to-list-nt:hover, .back-to-main:hover {
+            background-color: #6a9c92;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact { padding: 80px 0; background: linear-gradient(135deg, #3a3a3a, #2c2c2c); color: #f5f5f5; border-top: 3px solid #82b8ac; }
+        .contact .section-title { color: #f5f5f5; }
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .contact-info h3 { font-size: 24px; margin-bottom: 20px; color: #82b8ac; }
+        .contact-info ul { list-style: none; }
+        .contact-info ul li { margin-bottom: 18px; display: flex; align-items: center; color: #e0e0e0; }
+        .contact-info ul li .icon { margin-right: 15px; font-size: 20px; color: #82b8ac; width: 24px; text-align: center; }
+        .contact-info ul li a { color: #e0e0e0; text-decoration: none; transition: color 0.3s; }
+        .contact-info ul li a:hover { color: #82b8ac; }
+        footer { background: linear-gradient(135deg, #2c2c2c, #1a1a1a); color: #ccc; padding: 40px 0 20px; border-top: 2px solid #82b8ac; }
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-column h4 { color: #82b8ac; margin-bottom: 20px; font-size: 18px; font-weight: 600; }
+        .footer-column p { color: #aaa; line-height: 1.7; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #ccc; text-decoration: none; transition: color 0.3s; display: flex; align-items: center; }
+        .footer-column ul li a:hover { color: #82b8ac; }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; color: #888; }
+        .area-content { display: none; }
+        .area-content.active { display: block; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; justify-content: center; }
+            nav ul li { margin: 5px 8px; }
+            .hero h2 { font-size: 28px; }
+            .hero p { font-size: 18px; }
+            .section-title { font-size: 28px; }
+            .emergency-bar { flex-direction: column; }
+            .emergency-bar span { margin-bottom: 10px; margin-right: 0; }
+            .float-buttons { bottom: 20px; right: 20px; }
+            .float-button { width: 55px; height: 55px; font-size: 20px; }
+            .cta-button { display: block; margin: 10px auto; width: 90%; max-width: 300px; }
+            .back-to-list, .back-to-list-hki, .back-to-list-nt, .back-to-main { padding: 6px 16px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-bar">
+        <span>24小時緊急開鎖服務</span>
+        <a href="tel:+852-56300365" class="phone">📞 立即致電: 5630 0365</a>
+        <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="whatsapp">💬 WhatsApp聯絡</a>
+    </div>
+    
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://static.wixstatic.com/media/1d8add_500e1c6aa1d34b55a4477644a5471d94~mv2.jpg" alt="365開鎖公司標誌" style="height:70px; width:auto; border-radius:5px; border:2px solid #82b8ac; margin-right:10px;">
+                <div class="logo-text">
+                    <h1>&nbsp;365開鎖及安防有限公司</h1>
+                    <p>&nbsp;24小時專業開鎖・換鎖・電子鎖專家</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#services">服務項目</a></li>
+                    <li><a href="#knowledge">開鎖知識</a></li>
+                    <li><a href="#hongkong-district">服務地區</a></li>
+                    <li><a href="#contact">服務優勢</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="float-buttons">
+        <a href="tel:+852-56300365" class="float-button phone" aria-label="緊急聯絡電話">📞</a>
+        <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="float-button whatsapp" aria-label="WhatsApp聯絡">💬</a>
+    </div>
+    
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>香港最可靠的24小時開鎖服務</h2>
+            <p>365開鎖提供專業、快速、可靠的開鎖換鎖服務，專業鎖匠，15分鐘極速上門，全天候為您解決鎖具問題。無論是家居、辦公室還是汽車鎖問題，我們都能為您提供最優質的服務。</p>
+            <a href="tel:+852-56300365" class="cta-button phone">📞 24小時緊急熱線: 5630 0365</a>
+            <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="cta-button whatsapp">💬 WhatsApp即時聯絡</a>
+        </div>
+    </section>
+    
+    <!-- ========= 香港島內容（完整20區） ========= -->
+    <div id="area-hki" class="area-content">
+        <section class="service-district" id="hongkong-district">
+            <div class="container">
+                <div id="hki-list">
+                    <h2 class="section-title">香港島・<strong>開鎖</strong>據點</h2>
+                    <p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p>
+                    <div class="district-grid">
+                        <div class="district-item"><a class="district-btn-hki" data-district="central">中環</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="sheung-wan">上環</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="admiralty">金鐘</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="wan-chai">灣仔</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="causeway-bay">銅鑼灣</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="north-point">北角</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="quarry-bay">鰂魚涌</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="shau-kei-wan">筲箕灣</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="chai-wan">柴灣</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="aberdeen">香港仔</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="stanley">赤柱</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="pok-fu-lam">薄扶林</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="happy-valley">跑馬地</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="sai-wan">西環</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="kennedy-town">堅尼地城</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="tai-hang">大坑</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="mid-levels">半山區</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="the-peak">山頂</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="wong-chuk-hang">黃竹坑</a></div>
+                        <div class="district-item"><a class="district-btn-hki" data-district="cyberport">數碼港</a></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button class="back-to-main" onclick="location.href='index.html'">← 返回地區選擇</button>
+                    </div>
+                </div>
+                <!-- 香港島各區詳細容器（佔位，內容由腳本統一填充完整模板） -->
+                <div id="detail-central" class="district-detail"><h2 class="section-title">中環・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-sheung-wan" class="district-detail"><h2 class="section-title">上環・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-admiralty" class="district-detail"><h2 class="section-title">金鐘・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-wan-chai" class="district-detail"><h2 class="section-title">灣仔・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-causeway-bay" class="district-detail"><h2 class="section-title">銅鑼灣・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-north-point" class="district-detail"><h2 class="section-title">北角・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-quarry-bay" class="district-detail"><h2 class="section-title">鰂魚涌・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-shau-kei-wan" class="district-detail"><h2 class="section-title">筲箕灣・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-chai-wan" class="district-detail"><h2 class="section-title">柴灣・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-aberdeen" class="district-detail"><h2 class="section-title">香港仔・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-stanley" class="district-detail"><h2 class="section-title">赤柱・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-pok-fu-lam" class="district-detail"><h2 class="section-title">薄扶林・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-happy-valley" class="district-detail"><h2 class="section-title">跑馬地・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-sai-wan" class="district-detail"><h2 class="section-title">西環・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-kennedy-town" class="district-detail"><h2 class="section-title">堅尼地城・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-tai-hang" class="district-detail"><h2 class="section-title">大坑・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-mid-levels" class="district-detail"><h2 class="section-title">半山區・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-the-peak" class="district-detail"><h2 class="section-title">山頂・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-wong-chuk-hang" class="district-detail"><h2 class="section-title">黃竹坑・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div id="detail-cyberport" class="district-detail"><h2 class="section-title">數碼港・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-hki">← 返回香港島地區列表</button></div></div>
+                <div style="text-align: center; margin-top: 40px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92415.8093637607!2d114.10814371454634!3d22.260739594456505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ffbee78b0c2f%3A0xfa5b516be7153b90!2z6aaZ5riv5bO2!5e0!3m2!1szh-TW!2shk!4v1712051234567!5m2!1szh-TW!2shk" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+        </section>
+    </div>
+       
+    <!-- ========= 九龍內容（完整37區） ========= -->
+    <div id="area-kowloon" class="area-content">
+        <section class="service-district">
+            <div class="container">
+                <div id="kowloon-list">
+                    <h2 class="section-title">九龍・<strong>開鎖</strong>據點</h2>
+                    <p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p>
+                    <div class="district-grid">
+                        <div class="district-item"><a class="district-btn" data-district="kowloon-bay">九龍灣</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kowloon-city">九龍城</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kowloon-tong">九龍塘</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="prince-edward">太子</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="to-kwa-wan">土瓜環</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="tai-wo-hau">大窩口</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="ngau-tau-kok">牛頭角</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="shek-kip-mei">石硤尾</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="tsim-sha-tsui">尖沙咀</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="east-tsim-sha-tsui">尖東</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="chuk-yuen">竹園</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="jordan">佐敦</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="ho-man-tin">何文田</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="mong-kok">旺角</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="yau-ma-tei">油麻地</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="yau-tong">油塘</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="cheung-sha-wan">長沙灣</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="nam-cheong">南昌</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="austin">柯士甸</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="hung-hom">紅磡</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="mei-foo">美孚</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="tsuen-wan">荃灣</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="lai-chi-kok">荔枝角</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="lai-king">荔景</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kai-tak">啟德</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="choi-hung">彩虹</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="sham-shui-po">深水埗</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="wong-tai-sin">黃大仙</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="wham-poa">黃埔</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kwai-hing">葵興</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kwai-fong">葵芳</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kwai-shing">葵盛</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="lok-fu">樂富</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="lam-tin">藍田</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="kwun-tong">觀塘</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="diamond-hill">鑽石山</a></div>
+                        <div class="district-item"><a class="district-btn" data-district="ngau-chi-wan">牛池灣</a></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;"><button class="back-to-main" onclick="location.href='index.html'">← 返回地區選擇</button></div>
+                </div>
+                <!-- 九龍各區詳細容器（完整模板已內嵌） -->
+                <div id="detail-kowloon-bay" class="district-detail"><h2 class="section-title">九龍灣・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6>我們365<strong>九龍灣開鎖</strong>有多年開鎖及換鎖經驗，任何時間在九龍灣遇到各項鎖類問題的您，請即聯絡56300365。365<strong>九龍灣開鎖</strong>專業鎖匠熟識九龍灣交通，均以最快捷的速度到達，並為您解決任何鎖類問題。 365開鎖服務態度專業，誠實可靠，價錢合理，絕不濫收費用! 是你在<strong>九龍灣開鎖</strong> ，換鎖服務首選！</h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list">← 返回九龍地區列表</button></div></div>
+                <!-- 其他九龍區詳細容器（動態補充，此處僅示例，實際運行時腳本會補全） -->
+            </div>
+        </section>
+    </div>
+    
+    <!-- ========= 新界內容（完整31區） ========= -->
+    <div id="area-nt" class="area-content">
+        <section class="service-district">
+            <div class="container">
+                <div id="nt-list">
+                    <h2 class="section-title">新界・<strong>開鎖</strong>據點</h2>
+                    <p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p>
+                    <div class="district-grid">
+                        <div class="district-item"><a class="district-btn-nt" data-district="sheung-shui">上水</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tai-shui-hang">大水坑</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tai-po">大埔</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tai-wai">大圍</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="university">大學</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="yuen-long">元朗</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tin-shui-wai">天水圍</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tai-wo">太和</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tuen-mun">屯門</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="fo-tan">火炭</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="shek-mun">石門</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="siu-hong">兆康</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="hang-hau">坑口</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="sha-tin">沙田</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="che-kung-temple">車公廟</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tung-chung">東涌</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="sunny-bay">欣澳</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tsing-yi">青衣</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="heng-on">恒安</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="disneyland-resort">迪士尼</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="long-ping">朗屏</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="wu-kai-sha">烏溪沙</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="fanling">粉嶺</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="lai-king-nt">荔景</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="racecourse">馬場</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="ma-on-shan">馬鞍山</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="lohas-park">康城</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="city-one">第一城</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="tiu-keng-leng">調景嶺</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="kam-sheung-road">錦上路</a></div>
+                        <div class="district-item"><a class="district-btn-nt" data-district="po-lam">寶琳</a></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;"><button class="back-to-main" onclick="location.href='index.html'">← 返回地區選擇</button></div>
+                </div>
+                <!-- 新界各區詳細容器（佔位，由腳本填充完整模板） -->
+                <div id="detail-sheung-shui" class="district-detail"><h2 class="section-title">上水・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-nt">← 返回新界地區列表</button></div></div>
+                <!-- 其餘新界地區容器將由腳本動態創建並填充 -->
+            </div>
+        </section>
+    </div>
+    
+    <!-- 聯繫信息部分 - 包含詳細聯繫方式，方便用戶聯繫 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">聯絡我們</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>聯絡信息</h3>
+                    <ul>
+                        <li>
+                            <a href="tel:+852-56300365" class="contact-link phone">
+                                24小時熱線: <strong>5630 0365</strong> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="contact-link whatsapp">
+                                WhatsApp:<strong>5630 0365</strong> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+852-56300365" class="contact-link phone">
+                                辦公電話:<strong>5630 0365</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:365locksmithhk@gmail.com" target="_blank" class="contact-link email">
+                                電郵: 365locksmithhk@gmail.com 
+                            </a>
+                        </li>
+                        <li><a href="https://maps.app.goo.gl/mW4TzPdYgh18P7Ty9" target="_blank" class="contact-link email">
+                                地址: 土瓜灣旭日街19號雅高工業大廈1212室
+                            </a></li>
+                         <li><a href="https://maps.app.goo.gl/mW4TzPdYgh18P7Ty9" target="_blank" class="contact-link email">
+                            服務時間: 24小時，全年無休</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>服務承諾</h3>
+                    <ul>
+                        <li>15-30分鐘快速上門</li>
+                        <li>服務前透明報價</li>
+                        <li>專業鎖匠</li>
+                        <li>不損壞門鎖結構</li>
+                        <li>提供服務保證</li>
+                        <li>支援WhatsApp即時查詢</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>365開鎖公司</h4>
+                    <p>香港最專業可靠的開鎖服務公司，擁有10年以上行業經驗，持牌鎖匠團隊，為您提供安全、快速、高效的鎖具解決方案。</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>快速連結</h4>
+                    <ul>
+                        <li><a href="#home">首頁</a></li>
+                        <li><a href="#services">服務項目</a></li>
+                        <li><a href="#areas">服務地區</a></li>
+                        <li><a href="#knowledge">開鎖知識</a></li>
+                        <li><a href="#advantages">服務優勢</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>主要服務</h4>
+                    <ul>
+                        <li><a href="service/emergency-unlock-service.html">緊急開鎖</a></li>
+                        <li><a href="service/electrical-lock-access-control-system.html">商業門禁</a></li>
+                        <li><a href="service/car-unlock-service.html">汽車開鎖</a></li>
+                        <li><a href="service/digital-lock.html">電子鎖安裝</a></li>
+                        <li><a href="service/safebox.html">夾萬開鎖</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>關注我們</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/share/17T6zh11LH"><img src="images/logo/fb-logo.jpg" alt="Facebook" width="23" height="23">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/365_locksmith_hk"><img src="images/logo/ig-logo.jpg" alt="Instagram" width="20" height="20">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@365locksmithhk"><img src="/images/logo/yt-logo.jpg" alt="YouTube" width="20" height="20">YouTube</a></li>
+
+                        <li><a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank"><img src="images/logo/wa-logo.jpg" alt="WhatsApp" width="25" height="25">WhatsApp聯絡</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>©️ 2019 <strong>365開鎖</strong> 及安防有限公司版權所有。 | 香港鎖匠服務 /p>
+                <p style="margin-top: 10px; font-size: 12px;">本網站內容僅供參考，實際服務以現場評估為準。緊急情況請直接致電24小時熱線或使用WhatsApp聯絡。</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // 電話/WhatsApp點擊記錄
+        const contactBtns = document.querySelectorAll('a[href^="tel:"], a[href*="whatsapp"], a[href*="wa.me"]');
+        contactBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.href.includes('whatsapp') || this.href.includes('wa.me') ? 'WhatsApp' : '電話';
+                console.log(`用戶透過${type}聯繫365開鎖`);
+            });
+        });
+        
+        // 生成完整服務承諾模板
+        function getServiceTemplate(districtName) {
+            return `我們365<strong>${districtName}開鎖</strong>有多年開鎖及換鎖經驗，任何時間在${districtName}遇到各項鎖類問題的您，請即聯絡56300365。365<strong>${districtName}開鎖</strong>專業鎖匠熟識${districtName}交通，均以最快捷的速度到達，並為您解決任何鎖類問題。 365開鎖服務態度專業，誠實可靠，價錢合理，絕不濫收費用! 是你在<strong>${districtName}開鎖</strong> ，換鎖服務首選！`;
+        }
+        
+        // 為香港島所有地區填充完整模板
+        function enhanceHKIDistricts() {
+            const hkiDetails = document.querySelectorAll('#area-hki .district-detail');
+            hkiDetails.forEach(detail => {
+                const titleElem = detail.querySelector('h2.section-title');
+                if (!titleElem) return;
+                let district = titleElem.innerText.replace('・開鎖據點', '').trim();
+                if (!district) return;
+                const template = getServiceTemplate(district);
+                const h6 = detail.querySelector('h6');
+                if (h6) h6.innerHTML = template;
+                else {
+                    const newH6 = document.createElement('h6');
+                    newH6.innerHTML = template;
+                    const pNode = detail.querySelector('p:last-of-type');
+                    if (pNode && pNode.style.textAlign === 'center') detail.insertBefore(newH6, pNode);
+                    else detail.appendChild(newH6);
+                }
+            });
+        }
+        
+        // 為九龍所有地區填充完整模板
+        function enhanceKowloonDistricts() {
+            const kowloonDetails = document.querySelectorAll('#area-kowloon .district-detail');
+            kowloonDetails.forEach(detail => {
+                const titleElem = detail.querySelector('h2.section-title');
+                if (!titleElem) return;
+                let district = titleElem.innerText.replace('・開鎖據點', '').trim();
+                if (!district) return;
+                const template = getServiceTemplate(district);
+                const h6 = detail.querySelector('h6');
+                if (h6) h6.innerHTML = template;
+                else {
+                    const newH6 = document.createElement('h6');
+                    newH6.innerHTML = template;
+                    const pNode = detail.querySelector('p:last-of-type');
+                    if (pNode && pNode.style.textAlign === 'center') detail.insertBefore(newH6, pNode);
+                    else detail.appendChild(newH6);
+                }
+            });
+        }
+        
+        // 為新界所有地區填充完整模板
+        function enhanceNTDistricts() {
+            const ntDetails = document.querySelectorAll('#area-nt .district-detail');
+            ntDetails.forEach(detail => {
+                const titleElem = detail.querySelector('h2.section-title');
+                if (!titleElem) return;
+                let district = titleElem.innerText.replace('・開鎖據點', '').trim();
+                if (!district) return;
+                const template = getServiceTemplate(district);
+                const h6 = detail.querySelector('h6');
+                if (h6) h6.innerHTML = template;
+                else {
+                    const newH6 = document.createElement('h6');
+                    newH6.innerHTML = template;
+                    const pNode = detail.querySelector('p:last-of-type');
+                    if (pNode && pNode.style.textAlign === 'center') detail.insertBefore(newH6, pNode);
+                    else detail.appendChild(newH6);
+                }
+            });
+        }
+        
+        // 確保九龍所有地區的 detail 都存在
+        function ensureKowloonDetails() {
+            const expectedIds = [
+                "kowloon-bay","kowloon-city","kowloon-tong","prince-edward","to-kwa-wan","tai-wo-hau","ngau-tau-kok","shek-kip-mei",
+                "tsim-sha-tsui","east-tsim-sha-tsui","chuk-yuen","jordan","ho-man-tin","mong-kok","yau-ma-tei","yau-tong","cheung-sha-wan",
+                "nam-cheong","austin","hung-hom","mei-foo","tsuen-wan","lai-chi-kok","lai-king","kai-tak","choi-hung","sham-shui-po",
+                "wong-tai-sin","wham-poa","kwai-hing","kwai-fong","kwai-shing","lok-fu","lam-tin","kwun-tong","diamond-hill","ngau-chi-wan"
+            ];
+            const container = document.querySelector('#area-kowloon .container');
+            if (!container) return;
+            const nameMap = {
+                "kowloon-bay":"九龍灣","kowloon-city":"九龍城","kowloon-tong":"九龍塘","prince-edward":"太子","to-kwa-wan":"土瓜環","tai-wo-hau":"大窩口",
+                "ngau-tau-kok":"牛頭角","shek-kip-mei":"石硤尾","tsim-sha-tsui":"尖沙咀","east-tsim-sha-tsui":"尖東","chuk-yuen":"竹園","jordan":"佐敦",
+                "ho-man-tin":"何文田","mong-kok":"旺角","yau-ma-tei":"油麻地","yau-tong":"油塘","cheung-sha-wan":"長沙灣","nam-cheong":"南昌",
+                "austin":"柯士甸","hung-hom":"紅磡","mei-foo":"美孚","tsuen-wan":"荃灣","lai-chi-kok":"荔枝角","lai-king":"荔景","kai-tak":"啟德",
+                "choi-hung":"彩虹","sham-shui-po":"深水埗","wong-tai-sin":"黃大仙","wham-poa":"黃埔","kwai-hing":"葵興","kwai-fong":"葵芳",
+                "kwai-shing":"葵盛","lok-fu":"樂富","lam-tin":"藍田","kwun-tong":"觀塘","diamond-hill":"鑽石山","ngau-chi-wan":"牛池灣"
+            };
+            expectedIds.forEach(id => {
+                if (!document.getElementById(`detail-${id}`)) {
+                    const newDetail = document.createElement('div');
+                    newDetail.id = `detail-${id}`;
+                    newDetail.className = 'district-detail';
+                    const districtName = nameMap[id] || id;
+                    newDetail.innerHTML = `<h2 class="section-title">${districtName}・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list">← 返回九龍地區列表</button></div>`;
+                    container.appendChild(newDetail);
+                }
+            });
+        }
+        
+        // 確保新界所有地區的 detail 都存在
+        function ensureNTDetails() {
+            const expectedIds = [
+                "sheung-shui","tai-shui-hang","tai-po","tai-wai","university","yuen-long","tin-shui-wai","tai-wo","tuen-mun","fo-tan",
+                "shek-mun","siu-hong","hang-hau","sha-tin","che-kung-temple","tung-chung","sunny-bay","tsing-yi","heng-on","disneyland-resort",
+                "long-ping","wu-kai-sha","fanling","lai-king-nt","racecourse","ma-on-shan","lohas-park","city-one","tiu-keng-leng","kam-sheung-road","po-lam"
+            ];
+            const container = document.querySelector('#area-nt .container');
+            if (!container) return;
+            const nameMap = {
+                "sheung-shui":"上水","tai-shui-hang":"大水坑","tai-po":"大埔","tai-wai":"大圍","university":"大學","yuen-long":"元朗",
+                "tin-shui-wai":"天水圍","tai-wo":"太和","tuen-mun":"屯門","fo-tan":"火炭","shek-mun":"石門","siu-hong":"兆康","hang-hau":"坑口",
+                "sha-tin":"沙田","che-kung-temple":"車公廟","tung-chung":"東涌","sunny-bay":"欣澳","tsing-yi":"青衣","heng-on":"恒安",
+                "disneyland-resort":"迪士尼","long-ping":"朗屏","wu-kai-sha":"烏溪沙","fanling":"粉嶺","lai-king-nt":"荔景","racecourse":"馬場",
+                "ma-on-shan":"馬鞍山","lohas-park":"康城","city-one":"第一城","tiu-keng-leng":"調景嶺","kam-sheung-road":"錦上路","po-lam":"寶琳"
+            };
+            expectedIds.forEach(id => {
+                if (!document.getElementById(`detail-${id}`)) {
+                    const newDetail = document.createElement('div');
+                    newDetail.id = `detail-${id}`;
+                    newDetail.className = 'district-detail';
+                    const districtName = nameMap[id] || id;
+                    newDetail.innerHTML = `<h2 class="section-title">${districtName}・開鎖據點</h2><p style="text-align: center; color: #4a5c5c; margin-bottom: 10px; font-size: 18px;">24小時開鎖｜15分鐘極速上門｜鎖匠直達</p><p style="text-align: center; margin-top: 30px; color: #5a6b6b;">📌 365開鎖服務承諾</p><h6></h6><div style="text-align: center; margin-top: 30px;"><button class="back-to-list-nt">← 返回新界地區列表</button></div>`;
+                    container.appendChild(newDetail);
+                }
+            });
+        }
+        
+        // 根據 URL 參數顯示對應地區內容
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        
+        // 初始化頁面
+        function init() {
+            ensureKowloonDetails();
+            ensureNTDetails();
+            enhanceHKIDistricts();
+            enhanceKowloonDistricts();
+            enhanceNTDistricts();
+            
+            const area = getQueryParam('area');
+            document.querySelectorAll('.area-content').forEach(el => el.classList.remove('active'));
+            
+            if (area === 'hki') {
+                document.getElementById('area-hki').classList.add('active');
+                const hkiList = document.getElementById('hki-list');
+                if (hkiList) hkiList.style.display = 'block';
+                document.querySelectorAll('#area-hki .district-detail').forEach(d => d.classList.remove('active'));
+            } else if (area === 'kowloon') {
+                document.getElementById('area-kowloon').classList.add('active');
+                document.getElementById('kowloon-list').style.display = 'block';
+                document.querySelectorAll('#area-kowloon .district-detail').forEach(d => d.classList.remove('active'));
+            } else if (area === 'nt') {
+                document.getElementById('area-nt').classList.add('active');
+                const ntList = document.getElementById('nt-list');
+                if (ntList) ntList.style.display = 'block';
+                document.querySelectorAll('#area-nt .district-detail').forEach(d => d.classList.remove('active'));
+            } else {
+                document.getElementById('area-kowloon').classList.add('active');
+                document.getElementById('kowloon-list').style.display = 'block';
+                document.querySelectorAll('#area-kowloon .district-detail').forEach(d => d.classList.remove('active'));
+            }
+            
+            // 綁定切換事件
+            document.querySelectorAll('.district-btn-hki').forEach(btn => {
+                btn.removeEventListener('click', window.hkiHandler);
+                window.hkiHandler = (e) => {
+                    e.preventDefault();
+                    const district = btn.getAttribute('data-district');
+                    document.getElementById('hki-list').style.display = 'none';
+                    document.querySelectorAll('#area-hki .district-detail').forEach(d => d.classList.remove('active'));
+                    const target = document.getElementById(`detail-${district}`);
+                    if(target) target.classList.add('active');
+                };
+                btn.addEventListener('click', window.hkiHandler);
+            });
+            document.querySelectorAll('.back-to-list-hki').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#area-hki .district-detail').forEach(d => d.classList.remove('active'));
+                    document.getElementById('hki-list').style.display = 'block';
+                });
+            });
+            
+            document.querySelectorAll('.district-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const district = btn.getAttribute('data-district');
+                    document.getElementById('kowloon-list').style.display = 'none';
+                    document.querySelectorAll('#area-kowloon .district-detail').forEach(d => d.classList.remove('active'));
+                    const target = document.getElementById(`detail-${district}`);
+                    if(target) target.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.back-to-list').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#area-kowloon .district-detail').forEach(d => d.classList.remove('active'));
+                    document.getElementById('kowloon-list').style.display = 'block';
+                });
+            });
+            
+            document.querySelectorAll('.district-btn-nt').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const district = btn.getAttribute('data-district');
+                    document.getElementById('nt-list').style.display = 'none';
+                    document.querySelectorAll('#area-nt .district-detail').forEach(d => d.classList.remove('active'));
+                    const target = document.getElementById(`detail-${district}`);
+                    if(target) target.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.back-to-list-nt').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#area-nt .district-detail').forEach(d => d.classList.remove('active'));
+                    document.getElementById('nt-list').style.display = 'block';
+                });
+            });
+        }
+        
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
