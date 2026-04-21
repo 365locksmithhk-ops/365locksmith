@@ -10,38 +10,38 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="365開鎖">
     <meta name="twitter:title" content="365開鎖|24小時開鎖 56300365|換鎖|電子鎖|開鎖佬|鎖匠">
-    <link rel="shortcut icon" href="../images/logo/365-logo.jpg">
+    <link rel="shortcut icon" href="/images/logo/365-logo.jpg">
 
     <!-- 結構化數據標記 (Schema.org) -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "365開鎖公司",
-      "image": "https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png",
-      "description": "香港24小時專業開鎖換鎖服務，專業鎖匠，15分鐘極速上門",
-      "address": {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "365開鎖公司",
+    "image": "https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png",
+    "description": "香港24小時專業開鎖換鎖服務，專業鎖匠，15分鐘極速上門",
+    "address": {
         "@type": "PostalAddress",
         "streetAddress": "土瓜灣旭日街19號雅高工業大廈1212室",
         "addressLocality": "香港",
         "addressRegion": "九龍",
         "postalCode": "999077",
         "addressCountry": "HK"
-      },
-      "geo": {
+    },
+    "geo": {
         "@type": "GeoCoordinates",
         "latitude": 22.3193,
         "longitude": 114.1694
-      },
-      "url": "https://locksmith365hk.com",
-      "telephone": "+852-56300365",
-      "openingHours": "Mo-Su 00:00-23:59",
-      "priceRange": "HKD$200起",
-      "sameAs": [
+    },
+    "url": "https://locksmith365hk.com",
+    "telephone": "+852-56300365",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "HKD$200起",
+    "sameAs": [
         "https://www.facebook.com/share/17T6zh11LH",
         "https://www.instagram.com/365_locksmith_hk",
         "https://www.365locksmithhk.com.hk/"
-      ]
+    ]
     }
     </script>
     
@@ -123,7 +123,7 @@
         }
         
         nav ul li {
-            margin-left: 12px;
+            margin-left: 25px;
         }
         
         nav ul li a {
@@ -131,7 +131,7 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 16px;
-            padding: 4px 7px;
+            padding: 8px 15px;
             border-radius: 4px;
             transition: all 0.3s;
             border: 1px solid transparent;
@@ -299,7 +299,7 @@
             border-radius: 2px;
         }
         
-        /* ----- 開鎖知識卡片基本樣式 (沿用作為電子鎖服務卡片) ----- */
+        /* ----- 開鎖知識卡片基本樣式 ----- */
         .knowledge-card {
             background-color: #ffffff;
             border-radius: 8px;
@@ -337,9 +337,10 @@
         
         .knowledge-image-overlay {
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
             left: 0;
             right: 0;
+            text-align: center;
             padding: 15px;
         }
         
@@ -419,7 +420,7 @@
         }
         
         .knowledge-full-article .knowledge-card {
-            display: block;          /* 改為 block，移除 flex */
+            display: block;
             width: 100%;
             cursor: default;
             border-top-width: 5px;
@@ -433,6 +434,7 @@
             text-align: center;
             margin-bottom: 30px;
             overflow: hidden;
+            position: relative; /* 確保覆蓋層相對於此定位 */
         }
         
         .knowledge-full-article .knowledge-image img {
@@ -448,7 +450,7 @@
         
         .knowledge-full-article .knowledge-image-overlay {
             position: absolute;
-            bottom: 10px;
+            bottom: 0;                /* 緊貼底部 */
             left: 0;
             right: 0;
             text-align: center;
@@ -478,6 +480,11 @@
         @media (min-width: 992px) {
             .knowledge-full-article .knowledge-image img {
                 max-width: 85%;
+            }
+            /* 大屏幕時，覆蓋層寬度與圖片一致 (85%) 並居中 */
+            .knowledge-full-article .knowledge-image-overlay {
+                width: 100%;
+                right: auto;      /* 取消右側拉伸 */
             }
         }
         
@@ -598,6 +605,12 @@
             font-size: 14px;
             color: #888888;
         }
+        
+        /* 更多文章按鈕 */
+        .more-articles-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
 
         .more-articles-btn {
             display: inline-block;
@@ -676,6 +689,84 @@
                 max-width: 280px;
             }
         }
+
+        /* 方法卡片、對比表格樣式 (保留，用於新文章) */
+        .method-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .method-card {
+            background: #f8fbfa;
+            border-radius: 20px;
+            padding: 25px 15px;
+            border: 1px solid #c0ddd4;
+            box-shadow: 0 4px 10px rgba(130, 184, 172, 0.15);
+            flex: 1 1 280px;
+            transition: transform 0.2s;
+            text-align: left;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(130, 184, 172, 0.25);
+        }
+        
+        .method-card h4 {
+            font-size: 22px;
+            color: #1e3a3a;
+            margin-bottom: 10px;
+            border-left: 5px solid #82b8ac;
+            padding-left: 12px;
+        }
+        .method-card h5 {
+            font-size: 16px;
+            color: #2c5a5a;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        .method-card p {
+            color: #3e5e5e;
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .method-card ul {
+            margin-left: 20px;
+            color: #3e5e5e;
+            font-size: 14px;
+        }
+        .method-card li {
+            margin-bottom: 4px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: #82b8ac;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0f0ec;
+            vertical-align: top;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9fdfc;
+        }
     </style>
 </head>
 <body>
@@ -686,7 +777,7 @@
         <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="whatsapp">💬 WhatsApp聯絡</a>
     </div>
     
-    <!-- 網站頭部 (已移除服務地區/服務優勢導航) -->
+    <!-- 網站頭部 -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -698,12 +789,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">首頁</a></li>
-                    <li><a href="../index.html#service">服務項目</a></li>
-                    <li><a href="../index.html#knowledge">開鎖知識</a></li>
-                    <li><a href="../index.html#areas">服務地區</a></li>
-                    <li><a href="../index.html#advantages">服務優勢</a></li>
-                    <li><a href="../index.html#contact">聯絡我們</a></li>
+                    <li><a href="/365開鎖/Home-page/Home-Page.html">首頁</a></li>
+                    <li><a href="/365開鎖/Service/Service.html">服務項目</a></li>
+                    <li><a href="/365開鎖/article/Article.html">開鎖知識</a></li>
+                    <li><a href="/365開鎖/Service-area/Service-Area-HK.html">服務地區</a></li>
+                    <li><a href="/365開鎖/Advantages/Advantages.html">服務優勢</a></li>
+                    <li><a href="/365開鎖/Contact/Contact.html">聯絡我們</a></li>
                 </ul>
             </nav>
         </div>
@@ -724,68 +815,91 @@
             <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="cta-button whatsapp">💬 WhatsApp即時聯絡</a>
         </div>
     </section>
-    <BR>
-    
-    <!-- ========== 新增電子鎖服務介紹（安裝、維修、開鎖、更換電池等） ========== -->
-    <section class="knowledge-full-article">
+    <br>
+
+    <!-- ========= 開鎖知識：為何配匙不應配上配 ========= -->
+    <section class="knowledge" id="knowledge">
         <div class="container">
-            <div class="knowledge-card">
-                <!-- 主圖片：電子鎖相關圖片（智能鎖安裝/電子鎖特寫） -->
-                <div class="knowledge-image">
-                    <img src="../images/service/digital-lock/wallpaper.jpg" 
-                    alt="三星電子鎖, 電子鎖安裝維修 - 365開鎖">
-                    <div class="knowledge-image-overlay">
-                        <span class="knowledge-image-tag">電子鎖專家</span>
+            <h2 class="section-title">配匙知識・專業拆解</h2>
+            
+            <div class="knowledge-full-article">
+                <div class="knowledge-card">
+                    <!-- 主圖片：更換為配匙/鎖匙主題圖片 -->
+                    <div class="knowledge-image">
+                        <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" 
+                            alt="鎖匙複製 - 配上配誤差" 
+                            loading="lazy"
+                            style="width: 80%; height: auto;">
+                        <div class="knowledge-image-overlay">
+                            <span class="knowledge-image-tag">配上配・誤差累積</span>
+                        </div>
+                    </div>
+                    
+                    <div class="knowledge-content">
+                        <h3>【鎖匠教室】為何配匙時不應該將鎖匙「配上配」？</h3>
+                        <div class="knowledge-meta">
+                            <span>📅 更新：2025年3月</span>
+                            <span class="knowledge-tag"> 配匙知識</span>
+                        </div>
+                        
+                        <p style="font-weight: 500; color: #1e3a3a;">好多人都以為配匙好簡單，拎條鎖匙去配就搞掂。但原來如果條匙本身係「配上配」，好可能令新鎖匙開唔到鎖，甚至損壞鎖膽！今日等我哋詳細解釋咩係配上配，點解要避免。</p>
+                        
+                        <!-- 三張卡片解釋配上配概念、場景、誤差原因 -->
+                        <div class="method-row">
+                            <!-- 配上配定義 -->
+                            <div class="method-card">
+                                <h4>什麼是「配上配」？</h4>
+                                <p><strong>配上配</strong>即係用已經複製出嚟嘅鎖匙再進行複製。例如：原裝匙A ➔ 複製成B匙，再用B匙複製成C匙，再用C匙複製成D匙……一路複製落去。</p>
+                            </div>
+                            
+                            <!-- 常見場景 -->
+                            <div class="method-card">
+                                <h4>配上配常見情況</h4>
+                                <p><strong>1. 公家/屋苑大閘：</strong>管理處用同一條後備匙（可能本身已係複製匙）不斷配給住戶，造成配上配。<br>
+                                <strong>2. 家庭：</strong>遺失鎖匙後，用家人手上嘅複製匙再去配新匙，新匙就係配上配。<br>
+                                <strong>3. 鎖匙磨損：</strong>原裝匙用耐咗有磨損，配出嚟嘅匙誤差更大。</p>
+                            </div>
+                            
+                            <!-- 誤差累積比喻 -->
+                            <div class="method-card">
+                                <h4>誤差點解會累積？</h4>
+                                <p>正如小朋友抄功課：將100分正確答案抄第一次得95分，再抄95分版本得90分，越抄越錯。配匙機複製時，匙坑深度、角度有微小差異，疊加幾次後，新匙可能無法與鎖膽內的下珠做出分介線，導致無法開鎖，甚至卡死鎖膽。</p>
+                            </div>
+                        </div>
+
+                        <!-- 正確做法 + 專業建議區塊 (合併兩個綠色框) -->
+                        <div style="background: #e9f3f0; padding: 20px; border-radius: 16px; margin: 25px 0; border-left: 8px solid #82b8ac;">
+                            <h4 style="margin-top: 0; border-left: none; padding-left: 0;">正確配匙方法</h4>
+                            <ul style="margin-bottom: 15px; color: #1e3a3a;">
+                                <li><strong>一定要用原裝鎖匙（出廠附帶嘅匙）做母匙</strong>，先至係按近100分嘅標準答案。</li>
+                                <li>如果原裝匙或配匙已經不能暢順地扭動，應該諮詢365開鎖更換鎖膽，徹底解決問題。</li>
+                                <li>高保安鎖膽（如電子鎖、葉片鎖）通常附有「原裝匙卡」或編號，必須用專用設備配匙，避免配上配。</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 15px; border-left: none; padding-left: 0;">365開鎖・專業建議</h4>
+                            <p style="margin-bottom: 0; color: #1e3a3a;">
+                            配匙看似簡單，但配匙既過程，誤差可以好大。配匙後，請在開門的情況下用配匙扭動鎖膽。如果是暢順，請放心繼續使用;如果有卡住卡住的情況，請重新配匙。但如果你手頭上嘅鎖匙本身已經唔暢銷，可以直接搵我哋上門更換鎖膽，確保新匙順暢。同時避免有鎖匙開唔到門的情況。我地提供24小時開鎖服務，有疑問即管致電查詢。
+                            </p>
+                        </div>
+                        
+                        <!-- 聯絡按鈕 -->
+                        <div class="contact-buttons">
+                            <a href="tel:+852-56300365" class="btn" style="font-size: 16px; background-color: #82b8ac; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">📞 緊急即撥 5630 0365</a>
+                            <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="btn" style="font-size: 16px; background: #25D366; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">💬 WhatsApp 查詢</a>
+                        </div>
                     </div>
                 </div>
-                <div class="knowledge-content">
-                    <h3>專業電子鎖服務 — 安裝・維修・開鎖・更換電池</h3>
-                    <p>365開鎖擁有經驗豐富的電子鎖技術團隊，專注於各類智能電子鎖的安裝、維修、故障排查及緊急開鎖服務。無論您是忘記密碼、指紋失靈、電子鎖死機，還是想升級家居安全，我們都能快速上門為您處理。</p>
-                    
-                    <h4>我們服務的電子鎖範圍</h4>
-                    <p>指紋鎖、密碼鎖、感應卡鎖、藍牙APP鎖<br>
-                    三星Samsung、SOLITY、ZIGBANG、耶魯Yale、PHILIPS等各大品牌<br>
-                    電子鎖安裝（新門安裝或更換舊鎖）<br>
-                    電子鎖維修）<br>
-                    電子鎖緊急開鎖（死機、無電、零件失靈）<br>
-                    更換電池、重置密碼</p>
-                    
-                    <div class="article-inline-img">
-                        <!-- 可選的小圖示，展示不同電子鎖品牌或安裝過程 -->
-                        <img src="../images/service/digital-lock/sample.jpg" 
-                        alt="智能門鎖" style="max-height:1000px;">
-                    </div>
-                    
-                    <h4>為什麼選擇365開鎖處理電子鎖問題？</h4>
-                    <p><strong>15分鐘極速上門</strong> — 全港多區師傅駐點，接到電話即時調配，市區平均15分鐘抵達。<br>
-                    <strong>原廠級技術</strong> — 團隊熟悉主流品牌電子鎖結構，使用專業工具，避免損壞門鎖。<br>
-                    <strong>全天候24小時</strong> — 無論深夜、假日，一通電話我們馬上出動。<br>
-                    <strong>透明收費</strong> — 服務前先報價，絕無隱藏費用，維修完成才收費。</p>
-                    
-                    <h4>常見電子鎖問題</h4>
-                    <p>電子鎖無法識別指紋/密碼 — 清潔感應器、重置系統或維修面板。<br>
-                    電子鎖完全死機/無反應 — 檢查電池、電路，必要時緊急解鎖並維修。<br>
-                    忘記密碼/遺失卡片 — 專業解鎖並重新設定密碼。<br>
-                    電池漏液/電路板故障 — 更換零件，修復鎖具功能。<br>
-                    入伙/搬屋更換電子鎖 — 提供多品牌電子鎖安裝服務，提升家居安全。</p>
-                    
-                    <h4>收費說明</h4>
-                    <p>電子鎖服務收費視乎品牌、型號及問題複雜度而定：<br>
-                    - 電子鎖緊急開鎖：<strong>$800起</strong><br>
-                    - 電子鎖維修：<strong>$600起</strong>（零件費另計）<br>
-                    - 電子鎖安裝：<strong>$800起</strong>（視乎鎖型及門的材質）<br>
-                    我們承諾收費合理，不坐地起價，服務前會與您確認報價。</p>
-                    
-                    <div class="contact-buttons">
-                        <a href="tel:+852-56300365" class="cta-button phone" style="padding:12px 30px; font-size:18px;">📞 立即致電 5630 0365</a>
-                        <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="cta-button whatsapp" style="padding:12px 30px; font-size:18px;">💬 WhatsApp查詢</a>
-                    </div>
-                </div>
+            </div>
+            
+            <!-- 瀏覽更多開鎖防盜知識按鈕 -->
+            <div class="more-articles-btn-container">
+                <a href="../knowledge.html" class="more-articles-btn" target="_blank" rel="noopener noreferrer">瀏覽更多開鎖防盜知識</a>
             </div>
         </div>
     </section>
     <br>
-    <!-- 聯繫我們 (不變) -->
+
+    <!-- 聯繫我們 -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title" style="color: white;">聯絡我們</h2>
@@ -847,24 +961,24 @@
                 <div class="footer-column">
                     <h4>快速連結</h4>
                     <ul>
-                        <li><a href="../index.html">首頁</a></li>
-                        <li><a href="../index.html#services">服務項目</a></li>
-                        <li><a href="../index.html#areas">服務地區</a></li>
-                        <li><a href="../index.html#knowledge">開鎖知識</a></li>
-                        <li><a href="../index.html#advantages">服務優勢</a></li>
-                        <li><a href="../index.html#contact">聯絡我們</a></li>
+                        <li><a href="#home">首頁</a></li>
+                        <li><a href="#services">服務項目</a></li>
+                        <li><a href="#areas">服務地區</a></li>
+                        <li><a href="#knowledge">開鎖知識</a></li>
+                        <li><a href="#advantages">服務優勢</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4>主要服務</h4>
                     <ul>
-                        <li><a href="../service/emergency-unlock-service.html">緊急開鎖</a></li>
+                        <li><a href="service/emergency-unlock-service.html">緊急開鎖</a></li>
                         <li><a href="../service/lock-cylinder.html">更換鎖膽</a></li>
-                        <li><a href="../service/electrical-lock-access-control-system.html">商業門禁</a></li>
-                        <li><a href="../service/car-unlock-service.html">汽車開鎖</a></li>
-                        <li><a href="../service/digital-lock.html">電子鎖安裝</a></li>
-                        <li><a href="../service/safebox.html">夾萬開鎖</a></li>
+                        <li><a href="service/electrical-lock-access-control-system.html">商業門禁</a></li>
+                        <li><a href="service/car-unlock-service.html">汽車開鎖</a></li>
+                        <li><a href="service/digital-lock.html">電子鎖安裝</a></li>
+                        <li><a href="service/safebox.html">夾萬開鎖</a></li>
                     </ul>
                 </div>
                 
@@ -874,12 +988,13 @@
                         <li><a href="https://www.facebook.com/share/17T6zh11LH"><img src="../images/logo/fb-logo.jpg" alt="Facebook" width="23" height="23">Facebook</a></li>
                         <li><a href="https://www.instagram.com/365_locksmith_hk"><img src="../images/logo/ig-logo.jpg" alt="Instagram" width="20" height="20">Instagram</a></li>
                         <li><a href="https://www.youtube.com/@365locksmithhk"><img src="../images/logo/yt-logo.jpg" alt="YouTube" width="20" height="20">YouTube</a></li>
+
                         <li><a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank"><img src="../images/logo/wa-logo.jpg" alt="WhatsApp" width="25" height="25">WhatsApp聯絡</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>©️ 2019 365<strong>開鎖</strong>公司版權所有。 | 香港鎖匠服務 | 防盜知識・專業開鎖</p>
+                <p>©️ 2019-2025 365<strong>開鎖</strong>公司版權所有。 | 香港鎖匠服務 | 防盜知識・專業開鎖</p>
                 <p style="margin-top: 10px; font-size: 12px;">本網站內容僅供參考，實際服務以現場評估為準。緊急情況請直接致電24小時熱線或使用WhatsApp聯絡。</p>
             </div>
         </div>
