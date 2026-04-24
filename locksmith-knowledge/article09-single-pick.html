@@ -10,38 +10,38 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="365開鎖">
     <meta name="twitter:title" content="365開鎖|24小時開鎖 56300365|換鎖|電子鎖|開鎖佬|鎖匠">
-    <link rel="shortcut icon" href="../images/logo/365-logo.jpg">
+    <link rel="shortcut icon" href="/images/logo/365-logo.jpg">
 
     <!-- 結構化數據標記 (Schema.org) -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "365開鎖公司",
-        "image": "https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png",
-        "description": "香港24小時專業開鎖換鎖服務，專業鎖匠，15分鐘極速上門",
-        "address": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "365開鎖公司",
+      "image": "https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png",
+      "description": "香港24小時專業開鎖換鎖服務，專業鎖匠，15分鐘極速上門",
+      "address": {
         "@type": "PostalAddress",
         "streetAddress": "土瓜灣旭日街19號雅高工業大廈1212室",
         "addressLocality": "香港",
         "addressRegion": "九龍",
         "postalCode": "999077",
         "addressCountry": "HK"
-        },
-        "geo": {
+      },
+      "geo": {
         "@type": "GeoCoordinates",
         "latitude": 22.3193,
         "longitude": 114.1694
-        },
-        "url": "https://locksmith365hk.com",
-        "telephone": "+852-56300365",
-        "openingHours": "Mo-Su 00:00-23:59",
-        "priceRange": "HKD$200起",
-        "sameAs": [
+      },
+      "url": "https://locksmith365hk.com",
+      "telephone": "+852-56300365",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "HKD$200起",
+      "sameAs": [
         "https://www.facebook.com/share/17T6zh11LH",
         "https://www.instagram.com/365_locksmith_hk",
         "https://www.365locksmithhk.com.hk/"
-        ]
+      ]
     }
     </script>
     
@@ -299,7 +299,7 @@
             border-radius: 2px;
         }
         
-        /* ----- 開鎖知識卡片基本樣式 (沿用) ----- */
+        /* ----- 開鎖知識卡片基本樣式 ----- */
         .knowledge-card {
             background-color: #ffffff;
             border-radius: 8px;
@@ -337,10 +337,10 @@
         
         .knowledge-image-overlay {
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            text-align: center;
             padding: 15px;
         }
         
@@ -413,47 +413,82 @@
             border: 1px solid #eaeaea;
         }
         
-        /* ----- 開鎖實例網格專用樣式 (9:16 豎版圖片) ----- */
-        .cases-section {
-            padding: 40px 0 20px;
-        }
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+        /* ----- 左側主圖片改為置中 (垂直堆疊) ----- */
+        .knowledge-full-article {
             margin-top: 30px;
             margin-bottom: 40px;
         }
-        .cases-grid .knowledge-image {
-            aspect-ratio: 9 / 16;        /* 改為豎版比例 9:16 */
-            height: auto;
-            max-height: none;
-            background-color: #e0e0e0;   /* 加載過程佔位 */
-        }
-        .cases-grid .knowledge-image img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
+        
+        .knowledge-full-article .knowledge-card {
             display: block;
-        }
-        .cases-grid .knowledge-content {
-            padding: 18px 20px 20px;
-        }
-        .cases-grid .knowledge-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-        .cases-grid .knowledge-content p {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-            color: #4f4f4f;
-        }
-        .cases-grid .knowledge-meta {
-            margin-bottom: 5px;
-            font-size: 0.85rem;
+            width: 100%;
+            cursor: default;
+            border-top-width: 5px;
+            transition: box-shadow 0.3s;
         }
         
-        /* 按鈕置中容器 */
+        .knowledge-full-article .knowledge-image {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            text-align: center;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative; /* 確保覆蓋層相對於此定位 */
+        }
+        
+        .knowledge-full-article .knowledge-image img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        
+        .knowledge-full-article .knowledge-image-overlay {
+            position: absolute;
+            bottom: 0;                /* 緊貼底部 */
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .knowledge-full-article .knowledge-image-tag {
+            display: inline-block;
+            background-color: #82b8ac;
+            color: white;
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .knowledge-full-article .knowledge-content {
+            padding: 0 25px 30px;
+        }
+        
+        .knowledge-full-article .knowledge-content h3 {
+            font-size: 26px;
+            color: #1e3a3a;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 992px) {
+            .knowledge-full-article .knowledge-image img {
+                max-width: 85%;
+            }
+            /* 大屏幕時，覆蓋層寬度與圖片一致 (85%) 並居中 */
+            .knowledge-full-article .knowledge-image-overlay {
+                width: 100%;
+                right: auto;      /* 取消右側拉伸 */
+            }
+        }
+        
+        /* ----- 按鈕置中容器 ----- */
         .contact-buttons {
             text-align: center;
             margin-top: 30px;
@@ -574,8 +609,7 @@
         /* 更多文章按鈕 */
         .more-articles-btn-container {
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin-top: 40px;
         }
 
         .more-articles-btn {
@@ -643,14 +677,94 @@
                 width: 90%;
                 max-width: 300px;
             }
-            .cases-grid {
-                grid-template-columns: 1fr;
+            .knowledge-full-article .knowledge-content h3 {
+                font-size: 22px;
+            }
+            .knowledge-full-article .knowledge-image img {
+                max-width: 100%;
             }
             .contact-buttons .btn {
                 display: block;
                 margin: 10px auto;
                 max-width: 280px;
             }
+        }
+
+        /* 方法卡片、對比表格樣式 (保留，用於新文章) */
+        .method-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .method-card {
+            background: #f8fbfa;
+            border-radius: 20px;
+            padding: 25px 15px;
+            border: 1px solid #c0ddd4;
+            box-shadow: 0 4px 10px rgba(130, 184, 172, 0.15);
+            flex: 1 1 280px;
+            transition: transform 0.2s;
+            text-align: left;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(130, 184, 172, 0.25);
+        }  
+        .method-card h4 {
+            font-size: 22px;
+            color: #1e3a3a;
+            margin-bottom: 10px;
+            border-left: 5px solid #82b8ac;
+            padding-left: 12px;
+        }
+        .method-card h5 {
+            font-size: 16px;
+            color: #2c5a5a;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        .method-card p {
+            color: #3e5e5e;
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .method-card ul {
+            margin-left: 20px;
+            color: #3e5e5e;
+            font-size: 14px;
+        }
+        .method-card li {
+            margin-bottom: 4px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: #82b8ac;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0f0ec;
+            vertical-align: top;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9fdfc;
         }
     </style>
 </head>
@@ -662,7 +776,7 @@
         <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="whatsapp">💬 WhatsApp聯絡</a>
     </div>
     
-    <!-- 網站頭部 (已移除服務地區/服務優勢導航) -->
+    <!-- 網站頭部 -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -691,13 +805,6 @@
         <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="float-button whatsapp" aria-label="WhatsApp聯絡">💬</a>
     </div>
     
-    
-    <!-- 浮動按鈕 -->
-    <div class="float-buttons">
-        <a href="tel:+852-56300365" class="float-button phone" aria-label="緊急聯絡電話">📞</a>
-        <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="float-button whatsapp" aria-label="WhatsApp聯絡">💬</a>
-    </div>
-    
     <!-- 主橫幅 -->
     <section class="hero" id="home">
         <div class="container">
@@ -708,235 +815,99 @@
         </div>
     </section>
     <br>
-    
-    <!-- ========== 開鎖實例展示區 (9:16 豎版圖片) ========== -->
-    <section class="cases-section">
+
+    <!-- ========= 開鎖知識：作為租客可以自己換電子鎖嗎？ ========= -->
+    <section class="knowledge" id="knowledge">
         <div class="container">
-            <h2 class="section-title">真實開鎖實例</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #555;">每一個案例都是我們專業的見證，15分鐘極速上門，專業安全無損開啟。</p>
+            <h2 class="section-title">租客換電子鎖・注意事項</h2>
             
-            <div class="cases-grid">
-                
-
-                <!-- 實例卡片 29 (豎版圖片容器) -->
+            <div class="knowledge-full-article">
                 <div class="knowledge-card">
+                    <!-- 主圖片：租客與電子鎖主題 (Unsplash 門鎖安裝) -->
                     <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-029.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
+                        <img src="https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" 
+                            alt="師傅安裝電子鎖 - 租客更換前需知" 
+                            loading="lazy"
+                            style="width: 80%; height: auto;">
                         <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
+                            <span class="knowledge-image-tag">租客換電子鎖・注意事項</span>
                         </div>
                     </div>
+                    
                     <div class="knowledge-content">
+                        <h3>【租客必讀】自己將機械鎖換成電子鎖，得唔得？</h3>
                         <div class="knowledge-meta">
-                            <span>📅 2021-06</span>
-                            <span>📍 大窩口</span>
+                            <span>📅 更新：2025年3月</span>
+                            <span class="knowledge-tag">租屋須知・電子鎖</span>
                         </div>
-                        <h3>大窩口緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
+                        
+                        <p style="font-weight: 500; color: #1e3a3a;">好多租客想提升居住安全或追求方便，想將原本嘅機械鎖換成電子鎖。但咁做會唔會違反租約？會唔會得罪業主？今日我哋同你拆解租客自行更換電子鎖嘅權利、限制同正確步驟，等你可以安心升級，同時避免糾紛。</p>
+                        
+                        <!-- 三張卡片解釋關鍵重點 -->
+                        <div class="method-row">
+                            <!-- 查看租約 -->
+                            <div class="method-card">
+                                <h4>1. 租約合同</h4>
+                                <p>在一張正常既租約，正常都會列明「租客收到業主交來物業門匙及信箱鎖匙共X條，將來租客遷出時，必須交回業主，如有遺失,須照樣配妥，不得異議」;其實當中已指出當退按金交吉時，門鎖需要恢復原狀，包括保留好成個舊鎖同所有鎖匙，如果唔係就會被扣押金。
+                                    </p>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>2. 了解電子鎖廠的設計</h4>
+                                <p>由於機械鎖轉換電子鎖的客人佔了很大部份電子鎖的銷情 ，因此電子鎖廠在設計電子鎖時，會將電子鎖的前後版面設計得比機械鎖大一點，目的是為了在安裝後，門上不會出現空隙的情況，吸引用戶選擇。
+                                </p>
+                            </div>
+
+                            <!-- 告知房東 -->
+                            <div class="method-card">
+                                <h4>2. 了解自己需要</h4>
+                                <p>雖然合約寫明，但好多時時租客為左提升安全性同方便，甚用不介意自費更換電子鎖。而好多時租客誤以為只需要保留舊鎖，在搬走時裝返舊鎖就能還完原來樣貌。但當準備交吉既時候先發現舊鎖未能覆蓋在安裝電子鎖時開的新窿，無法恢復原狀，續而與業主發生爭執。
+                                </p>
+                            </div>
+                    
+                            <div class="method-card">
+                                <h4>4. 主動溝通，取得共識</h4>
+                                <p>在一般人的共識中，將電子鎖還原機械鎖但門上有窿其實是一件很難接受的事。因此為避免爭執發生，在安裝電子鎖前，請先與業主取得共識。方案可能是答應當完約交吉時將電子鎖留下，讓下手租客/業主繼續使用。如果業主不接受電子鎖，向業主保證交吉時改用其他更大版面的機械鎖而業主接受既話，都係解決方案之一。
+                                </p>
+                            </div>
+
+                            
+                        </div>
+
+                        <!-- 其他風險與總結 -->
+                        <div class="method-row" style="margin-top:10px;">
+                            <div class="method-card" style="flex: 1 1 100%;">
+                                <h4>特別注意：</h4>
+                                <ul style="margin-bottom: 10px; color: #1e3a3a;">
+                                <li><strong>出門記得帶實體鎖匙</strong><a href="../locksmith-knowledge/article04-samsung-smart-lock.html">(了解實體鎖匙既重要性)</a></li>
+                                <li><strong>定期更改電池</strong>，避免冇電開唔到門。</li>
+                                
+                            </ul>
+                        </div>
+
+                        <!-- 專業建議區塊 -->
+                        <div style="background: #e9f3f0; padding: 20px; border-radius: 16px; margin: 25px 0; border-left: 8px solid #82b8ac;">
+                            <h4 style="margin-top: 0; border-left: none; padding-left: 0;">365開鎖・專業建議</h4>
+                            <p style="margin-bottom: 0; color: #1e3a3a;">
+                                租客更換電子鎖，最緊要「與業主主動溝通，取得共識」。如果你已經得到同意，盡快聯絡我地365開鎖。我地提供各類電子鎖安裝，有疑問歡迎隨時聯絡我地。
+                            </p>
+                        </div>
+                        
+                        <!-- 聯絡按鈕 -->
+                        <div class="contact-buttons">
+                            <a href="tel:+852-56300365" class="btn" style="font-size: 16px; background-color: #82b8ac; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">📞 緊急即撥 5630 0365</a>
+                            <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="btn" style="font-size: 16px; background: #25D366; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">💬 WhatsApp 查詢</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- 實例卡片 30 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-030.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2021-07</span>
-                            <span>📍 金鐘</span>
-                        </div>
-                        <h3>金鐘緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 31 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-031.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2021-08</span>
-                            <span>📍 尖沙咀</span>
-                        </div>
-                        <h3>尖沙咀緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 32 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-032.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2021-08</span>
-                            <span>📍 美孚</span>
-                        </div>
-                        <h3>美孚緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 33 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-033.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2021-09</span>
-                            <span>📍 旺角</span>
-                        </div>
-                        <h3>旺角緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 34 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-034.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-10</span>
-                            <span>📍 荔景</span>
-                        </div>
-                        <h3>荔景緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 35 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-035.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-10</span>
-                            <span>📍 大窩口</span>
-                        </div>
-                        <h3>大窩口緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 36 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-036.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-10</span>
-                            <span>📍 佐敦</span>
-                        </div>
-                        <h3>佐敦緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 37 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-037.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-11</span>
-                            <span>📍 尖沙咀</span>
-                        </div>
-                        <h3>尖沙咀緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 38 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-038.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-11</span>
-                            <span>📍 何文田</span>
-                        </div>
-                        <h3>何文田緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                <!-- 實例卡片 39 (豎版圖片容器) -->
-                <div class="knowledge-card">
-                    <div class="knowledge-image">
-                        <img src="../images/case-study/rim-lock/rim-lock-039.jpg" alt="緊急開鎖 , 開鎖, 開鎖佬, 鎖匠">
-                        <div class="knowledge-image-overlay">
-                            <span class="knowledge-image-tag">住宅案例</span>
-                        </div>
-                    </div>
-                    <div class="knowledge-content">
-                        <div class="knowledge-meta">
-                            <span>📅 2022-11</span>
-                            <span>📍 彩虹</span>
-                        </div>
-                        <h3>彩虹緊急開鎖</h3>
-                        <p>住戶忘記帶鎖匙，師傅使用專業工具5分鐘內無損開啟</p>
-                        <span class="knowledge-tag">#緊急開鎖</span>
-                    </div>
-                </div>
-
-                
+            </div>
             
-            <!-- 查看更多按鈕 (可連結至實例列表頁) -->
+            <!-- 瀏覽更多開鎖防盜知識按鈕 -->
             <div class="more-articles-btn-container">
-                <a href="../service/emergency-unlock-service.html" class="more-articles-btn">查看更多開鎖實例</a>
+                <a href="../knowledge.html" class="more-articles-btn" target="_blank" rel="noopener noreferrer">瀏覽更多開鎖防盜知識</a>
             </div>
         </div>
     </section>
-    <!-- ========== 開鎖實例結束 ========== -->
-    
     <br>
 
     <!-- 聯繫我們 -->
@@ -990,6 +961,7 @@
         </div>
     </section>
     
+    <!-- 頁腳 -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -1061,6 +1033,15 @@
                 console.log(`用戶透過${type}聯繫365開鎖`);
             });
         });
+        
+        // 知識卡片不跳轉 (保留內部連結)
+        const card = document.querySelector('.knowledge-full-article .knowledge-card');
+        if(card) {
+            card.addEventListener('click', function(e) {
+                if(e.target.tagName === 'A' || e.target.closest('a')) return;
+                e.preventDefault();
+            });
+        }
     </script>
 </body>
 </html>
